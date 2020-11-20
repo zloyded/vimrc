@@ -18,6 +18,7 @@ fi
 cp $HOME/.vim/.vimrc $HOME/.vimrc
 
 echo "Installing Plugins";
-vim +PluginInstall;
 
-echo "Installed"
+echo "Installed .vimrc"
+echo "Now run vi(m) to install plugins"
+echo "vim +PluginInstall"
