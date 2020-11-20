@@ -174,7 +174,7 @@ set showtabline=0 "Отключаем панель табов (окошки FTW)
 "Сам по себе number показывает справа номера строк
 "relativenumber - нумерацию строк относительно положения курсора
 
-set number "А это гибридный вариант. Протестируйте все
+set number norelativenumber "А это гибридный вариант. Протестируйте все
 " neocomplete settings
 let g:neocomplete#enable_at_startup = 1
 set completeopt-=preview

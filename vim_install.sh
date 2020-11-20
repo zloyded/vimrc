@@ -15,7 +15,7 @@ else
 	echo "Add Vundle Plugin manager";
 	git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 fi
-cp $HOME/.vim/.vimrc $HOME/.vimrc
+cp $HOME/.vim/vimrcs/vimrc $HOME/.vimrc
 
 echo "Installing Plugins";
 
