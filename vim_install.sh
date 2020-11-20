@@ -6,9 +6,10 @@ fi
 
 git clone https://github.com/zloyded/vimrc.git $HOME/.vim;
 
-if [ test -a $HOME/.vim/bundle/Vundle.vim ]; then
+if [ -d $HOME/.vim/bundle/Vundle.vim ]; then
 	echo "Vundle Installed"
 else
+	echo "Add Vundle Plugin manager";
 	git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 fi
 cp .vimrc $HOME/.vimrc
