@@ -3,7 +3,7 @@
 ### Simple install 
 
 ```
-curl https://raw.githubusercontent.com/zloyded/vimrc/main/vim_install.sh | sh - && vim +PluginInstall
+curl https://raw.githubusercontent.com/zloyded/vimrc/main/vim_install.sh | sh - && vim +PluginInstall +qall
 ```
 
 

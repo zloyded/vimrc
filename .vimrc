@@ -11,6 +11,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
  
 Plugin 'gmarik/Vundle.vim'              " let Vundle manage Vundle, required
+Plugin 'saltstack/salt-vim'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 
 "---------=== Навигация по коду/проекту ===-------------
 Plugin 'scrooloose/nerdtree'            " Project and file navigation
@@ -171,7 +173,8 @@ set showtabline=0 "Отключаем панель табов (окошки FTW)
 
 "Сам по себе number показывает справа номера строк
 "relativenumber - нумерацию строк относительно положения курсора
-set number norelativenumber "А это гибридный вариант. Протестируйте все
+
+set number "А это гибридный вариант. Протестируйте все
 " neocomplete settings
 let g:neocomplete#enable_at_startup = 1
 set completeopt-=preview
