@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ test -d $HOME/.vim ]; then
+if [ -d $HOME/.vim ]; then
 	echo "backuping your .vim to .vim_bk";
 	mv .vim{,_bk};
 fi
