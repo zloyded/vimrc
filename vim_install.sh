@@ -14,4 +14,7 @@ else
 fi
 cp $HOME/.vim/.vimrc $HOME/.vimrc
 
+echo "Installing Plugins";
+vim +PluginInstall;
+
 echo "Installed"
