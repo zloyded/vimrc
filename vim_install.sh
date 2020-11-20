@@ -4,7 +4,7 @@ if [ -d $HOME/.vim ]; then
 	if [ -d $HOME/.vim_bk ]; then
 		rm -rf $HOME/.vim_bk;
 	fi
-	mv .vim{,_bk};
+	mv $HOME/.vim{,_bk};
 fi
 
 git clone https://github.com/zloyded/vimrc.git $HOME/.vim;
