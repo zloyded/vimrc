@@ -78,6 +78,11 @@ endif
 """"""""""""""""""""""""""""""
 autocmd BufRead *.twig set syntax=html filetype=html
 
+au FileType javascript set expandtab
+au FileType javascript set autoindent
+au FileType javascript set tabstop=2
+au FileType javascript set softtabstop=2
+au FileType javascript set shiftwidth=2
 
 """"""""""""""""""""""""""""""
 " => Markdown
