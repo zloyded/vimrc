@@ -9,7 +9,7 @@ colorscheme molokai
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
- 
+Plugin 'ErichDonGubler/vim-sublime-monokai' 
 Plugin 'gmarik/Vundle.vim'              " let Vundle manage Vundle, required
 Plugin 'saltstack/salt-vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'
