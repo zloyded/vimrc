@@ -1,4 +1,5 @@
 set nocompatible              " be iMproved, required
+colorscheme molokai
 filetype off                  " required
 let mapleader = "," 
 "=====================================================
@@ -8,6 +9,7 @@ let mapleader = ","
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ErichDonGubler/vim-sublime-monokai' 
 Plugin 'gmarik/Vundle.vim'              " let Vundle manage Vundle, required
 Plugin 'saltstack/salt-vim'
@@ -16,14 +18,14 @@ Plugin 'Glench/Vim-Jinja2-Syntax'
 "---------=== Навигация по коду/проекту ===-------------
 Plugin 'scrooloose/nerdtree'            " Project and file navigation
 Plugin 'majutsushi/tagbar'              " Class/module browser
- 
+Plugin 'terryma/vim-multiple-cursors' 
 "------------------=== Прочее ===----------------------
 Plugin 'bling/vim-airline'              " Lean & mean status/tabline for vim
 Plugin 'fisadev/FixedTaskList.vim'      " Pending tasks list
 Plugin 'rosenfeld/conque-term'          " Consoles as buffers
 Plugin 'tpope/vim-surround'             " Parentheses, brackets, quotes, XML tags, and more
 Plugin 'ctrlpvim/ctrlp.vim'
- 
+Plugin 'vim-airline/vim-airline-themes' 
 "--------------=== Поддержка сниппетов ===---------------
 Plugin 'garbas/vim-snipmate'            " Snippets manager
 Plugin 'MarcWeber/vim-addon-mw-utils'   " dependencies #1
@@ -37,10 +39,11 @@ Plugin 'klen/python-mode'               " Python mode (docs, refactor, lints, hi
 Plugin 'davidhalter/jedi-vim'           " Jedi-vim autocomplete plugin
 Plugin 'mitsuhiko/vim-jinja'            " Jinja support for vim
 Plugin 'mitsuhiko/vim-python-combined'  " Combined Python 2/3 for Vim
+" -- VIM
 Plugin 'Xuyuanp/nerdtree-git-plugin'    " GIT support
 Plugin 'airblade/vim-gitgutter'
-Plugin 'szw/vim-tags' 
-Plugin 'HerringtonDarkholme/yats.vim'
+
+"------ JAVASCRIPT -----
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 " --- golang --- 
@@ -70,34 +73,12 @@ set cursorline
 "endif
 set ttyfast
 
-"if has("autocmd")
-"  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-"endif
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
  
 " включить подсветку кода
 syntax on
-
-"if has("gui_running")
-" GUI? устаналиваем тему и размер окна
-"set lines=50 columns=125
-" раскомментируйте эти строки, если хотите, чтобы NERDTree/TagBar автоматически отображались при запуске vim
-autocmd vimenter * TagbarToggle
-autocmd vimenter * NERDTree
-autocmd vimenter * if !argc() | NERDTree | endif
- 
-" на маке vim?
-"if has("mac")
-"  set guifont=Consolas:h13
-"  set fuoptions=maxvert,maxhorz
-"else
-"" дефолтный GUI
-"  set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 10
-"endif
-"else
-"" терминал?
-""  colorscheme myterm
-"endif
- 
 tab sball
 set switchbuf=useopen
  
@@ -142,7 +123,7 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline_theme = "darcula"
+let g:airline_theme = "molokai"
 
 " TagBar настройки
 map <F4> :TagbarToggle<CR>
@@ -205,5 +186,4 @@ map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
-colorscheme molokai
 
