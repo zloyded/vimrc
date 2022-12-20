@@ -1,5 +1,5 @@
 set nocompatible              " be iMproved, required
-colorscheme molokai
+colorscheme onehalfdark
 filetype off                  " required
 
 let mapleader = "," 
@@ -33,6 +33,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'   " dependencies #1
 Plugin 'tomtom/tlib_vim'                " dependencies #2
 Plugin 'honza/vim-snippets'             " snippets repo
 Plugin 'Shougo/neocomplete' 
+
 
 "---------------=== Поддержка языка ===-------------
 " --- Python ---
@@ -125,15 +126,16 @@ set laststatus=1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline_theme = "molokai"
+let g:airline_theme='deus'
+" let g:airline_theme = 'onehalfdark'
 
 " TagBar настройки
 map <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 0 " автофокус на Tagbar при открытии
  
 " NerdTree настройки
-" показать NERDTree на F3
-map <F3> :NERDTreeToggle<CR>
+" показать NERDTree на F2
+map <F2> :NERDTreeToggle<CR>
 "игноррируемые файлы с расширениями
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.pyo$', '\.class$', 'pip-log\.txt$', '\.o$']  
 let g:NERDTreeGitStatusIndicatorMapCustom = {
@@ -149,7 +151,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 " TaskList настройки
-map <F2> :TaskList<CR> 	   " отобразить список тасков на F2
+map <F3> :TaskList<CR> 	   " отобразить список тасков на F3
  
 " Работа буфферами
 map <C-q> :bd<CR> 	   " CTRL+Q - закрыть текущий буффер
