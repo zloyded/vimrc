@@ -157,6 +157,9 @@ map <F3> :TaskList<CR> 	   " отобразить список тасков на
 map <C-q> :bd<CR> 	   " CTRL+Q - закрыть текущий буффер
 "set guioptions= "Отключаем панели прокрутки в GUI
 "set showtabline=0 "Отключаем панель табов (окошки FTW)
+set foldmethod=syntax
+set foldnestmax=1 
+
 
 "Сам по себе number показывает справа номера строк
 "relativenumber - нумерацию строк относительно положения курсора
@@ -191,3 +194,5 @@ map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
+
+let g:jedi#goto_definitions_command = '<C-[>'
