@@ -168,7 +168,7 @@ set number norelativenumber "А это гибридный вариант. Про
 " neocomplete settings
 let g:neocomplete#enable_at_startup = 1
 set completeopt-=preview
-
+let g:pymode_breakpoint_bind = ''
 """"""""""""""""""""""""""""""
 " => CTRL-P
 """"""""""""""""""""""""""""""
@@ -178,16 +178,12 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_map = '<C-f>'
 map <leader>j :CtrlP<cr>
 
-" Quickly find and open a buffer
-map <leader>b :CtrlPBuffer<cr>
-
 
 " Quickly find and open a recently opened file
 map <leader>f :CtrlPMRU<CR>
 let g:snipMate = { 'snippet_version' : 1 }
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
-let g:snipMate = { 'snippet_version' : 1 }
 """
 " TABS
 """"
@@ -195,5 +191,13 @@ map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
-
+"""
+" JEDI
+"""
+let g:jedi#auto_initialization = 0
 let g:jedi#goto_definitions_command = '<C-[>'
+" let g:jedi#auto_vim_configuration = 0
+
+" Quickly find and open a buffer
+map <leader>b :CtrlPBuffer<cr>
+
