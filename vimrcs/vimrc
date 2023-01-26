@@ -39,9 +39,8 @@ Plugin 'Shougo/neocomplete'
 " --- Python ---
 Plugin 'klen/python-mode'               " Python mode (docs, refactor, lints, highlighting, run and ipdb and more)
 Plugin 'davidhalter/jedi-vim'           " Jedi-vim autocomplete plugin
-Plugin 'mitsuhiko/vim-jinja'            " Jinja support for vim
 Plugin 'mitsuhiko/vim-python-combined'  " Combined Python 2/3 for Vim
-
+Plugin 'lepture/vim-jinja'
 " -- VIM
 Plugin 'Xuyuanp/nerdtree-git-plugin'    " GIT support
 Plugin 'airblade/vim-gitgutter'
