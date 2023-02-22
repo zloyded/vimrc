@@ -199,4 +199,5 @@ let g:jedi#goto_definitions_command = '<C-[>'
 
 " Quickly find and open a buffer
 map <leader>b :CtrlPBuffer<cr>
-
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
