@@ -10,6 +10,7 @@ let mapleader = ","
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'tmux-plugins/vim-tmux'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ErichDonGubler/vim-sublime-monokai' 
 Plugin 'gmarik/Vundle.vim'              " let Vundle manage Vundle, required
@@ -32,15 +33,21 @@ Plugin 'garbas/vim-snipmate'            " Snippets manager
 Plugin 'MarcWeber/vim-addon-mw-utils'   " dependencies #1
 Plugin 'tomtom/tlib_vim'                " dependencies #2
 Plugin 'honza/vim-snippets'             " snippets repo
-Plugin 'Shougo/neocomplete' 
-
 
 "---------------=== Поддержка языка ===-------------
 " --- Python ---
-Plugin 'klen/python-mode'               " Python mode (docs, refactor, lints, highlighting, run and ipdb and more)
 Plugin 'davidhalter/jedi-vim'           " Jedi-vim autocomplete plugin
 Plugin 'mitsuhiko/vim-python-combined'  " Combined Python 2/3 for Vim
 Plugin 'lepture/vim-jinja'
+Plugin 'szw/vim-tags'
+Plugin 'webdevel/tabulous'
+Plugin 'tell-k/vim-autopep8'
+Plugin 'pythoncomplete'
+Plugin 'ivanov/vim-ipython'
+Plugin 'python_fold'
+Plugin 'dense-analysis/ale'
+Plugin 'Ivo-Donchev/vim-react-goto-definition'
+
 " -- VIM
 Plugin 'Xuyuanp/nerdtree-git-plugin'    " GIT support
 Plugin 'airblade/vim-gitgutter'
@@ -157,17 +164,31 @@ map <C-q> :bd<CR> 	   " CTRL+Q - закрыть текущий буффер
 "set guioptions= "Отключаем панели прокрутки в GUI
 "set showtabline=0 "Отключаем панель табов (окошки FTW)
 set foldmethod=syntax
-set foldnestmax=1 
+set foldnestmax=3
 
 
 "Сам по себе number показывает справа номера строк
 "relativenumber - нумерацию строк относительно положения курсора
 
 set number norelativenumber "А это гибридный вариант. Протестируйте все
-" neocomplete settings
-let g:neocomplete#enable_at_startup = 1
 set completeopt-=preview
+
+"PYMODE
+" let g:pymode_python = 'python'
 let g:pymode_breakpoint_bind = ''
+
+let g:pymode_rope = 0
+let g:pymode_rope_completion = 0
+let g:pymode_rope_complete_on_dot = 0
+" Pymode linter
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_lint_ignore="E501,W601,C0110"
+
+let g:pymode_lint_write = 1
+let g:pymode_folding = 1
+let g:pymode_run = 0
+
 """"""""""""""""""""""""""""""
 " => CTRL-P
 """"""""""""""""""""""""""""""
@@ -195,7 +216,7 @@ map <leader>tm :tabmove
 """
 let g:jedi#auto_initialization = 0
 let g:jedi#goto_definitions_command = '<C-[>'
-" let g:jedi#auto_vim_configuration = 0
+let g:jedi#auto_vim_configuration = 0
 
 " Quickly find and open a buffer
 map <leader>b :CtrlPBuffer<cr>
