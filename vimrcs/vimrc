@@ -36,6 +36,7 @@ Plugin 'honza/vim-snippets'             " snippets repo
 
 "---------------=== Поддержка языка ===-------------
 " --- Python ---
+Plugin 'vim-autoformat/vim-autoformat' " Python Autoformat
 Plugin 'davidhalter/jedi-vim'           " Jedi-vim autocomplete plugin
 Plugin 'mitsuhiko/vim-python-combined'  " Combined Python 2/3 for Vim
 Plugin 'lepture/vim-jinja'
@@ -189,6 +190,8 @@ let g:pymode_lint_write = 1
 let g:pymode_folding = 1
 let g:pymode_run = 0
 
+" PyAutoFormat
+let g:python3_host_prog="${HOME}/.pyenv/shims/python"
 """"""""""""""""""""""""""""""
 " => CTRL-P
 """"""""""""""""""""""""""""""
