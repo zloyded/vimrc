@@ -52,6 +52,8 @@ Plugin 'Ivo-Donchev/vim-react-goto-definition'
 " -- VIM
 Plugin 'Xuyuanp/nerdtree-git-plugin'    " GIT support
 Plugin 'airblade/vim-gitgutter'
+Plugin 'mhinz/vim-signify'
+Plugin 'HiPhish/jinja.vim'
 
 "------ JAVASCRIPT -----
 Plugin 'pangloss/vim-javascript'
